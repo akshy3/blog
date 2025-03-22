@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="posts"></p>
+    <script>
+        let postsSection = document.getElementById("posts");
+        fetch("http://localhost:3000/posts")
+        .then((res)=>res.json())
+        .then((data)=>{postsSection.textContent = data.toString()})
+    </script>
+</body>
+</html>
